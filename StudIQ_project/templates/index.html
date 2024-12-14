@@ -1,0 +1,148 @@
+{% load static %}
+
+{% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudIQ</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <!-- Hero Section -->
+    <div id="hero">
+        <div class="container text-center">
+            <h1 class="fw-bold text-dark">Bosan dengan pelajaran di sekolah?<br>Ayo Telusuri Materi Pembelajaran online
+                di StudIQ!</h1>
+            <p>Materi pembelajaran online paling interaktif dengan isi materi yang lengkap dan layanan terbaik<br>Solusi
+                untuk anak-anak yang kurang puas belajar di sekolah</p>
+        </div>
+    </div>
+
+    <!-- Kelas Section -->
+    <div id="kelas">
+        <div class="container">
+            <h1>StudIQ bisa untuk siapa aja?</h1>
+            <div class="card-container">
+                <div class="bingkai-kelas card">
+                    <img src="{% static 'image/kelas-4.png' %}" alt="kelas-4">
+                </div>
+                <div class="bingkai-kelas card">
+                    <img src="{% static 'image/kelas-5.png' %}" alt="kelas-5">
+                </div>
+                <div class="bingkai-kelas card">
+                    <img src="{% static 'image/kelas-6.png' %}" alt="kelas-6">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Konten Section -->
+    <div class="konten">
+        <div class="container">
+            <h1>Ada Apa Saja di StudIQ?</h1>
+            <div class="row mb-0 mb-md-4 pb-5">
+                <div class="col-lg-4 col-md-6">
+                    <a href="{% url 'studiq_app:daftar_kelas' %}" class="card-link">
+                        <div class="card-konten-belajar card mb-lg-0 mb-4">
+                            <img class="img-icon" src="{% static 'image/bg-materi.png' %}" alt="gambar">
+                            <div class="card-title">Konten Belajar</div>
+                            <p>Temukan konten pembelajaran dalam<br>bentuk modul dan slide PPT</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-konten-belajar card mb-lg-0 mb-4">
+                        <img class="img-icon" src="{% static 'image/bg-materi-2.png' %}" alt="gambar">
+                        <div class="card-title">Bank Soal</div>
+                        <p>Temukan kumpulan soal yang kamu<br>butuhkan sesuai dengan materi yang<br>kamu pelajari</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Isi Section -->
+    <div id="isi">
+        <div class="container">
+            <h1>Kenapa harus StudIQ?</h1>
+            <div class="bingkai-isi-percaya card">
+                <div class="row">
+                    <div class="isi-container col-md-6">
+                        <h3 class="fw-bold">StudIQ sudah dipercaya oleh jutaan murid Indonesia</h3>
+                        <p>StudIQ tidak akan berhenti sampai seluruh anak SD di Indonesia mendapatkan pengalaman
+                            belajar yang berbeda</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <div class="trust-card d-flex p-3 rounded align-items-center gap-3">
+                                    <div class="icon-trust">
+                                        <img src="{% static 'image/trust-1.png' %}" alt="medal">
+                                    </div>
+                                    <div class="text-trust">
+                                        <p class="fw-bold mb-0">1000+ siswa sudah bergabung</p>
+                                        <p class="mb-0">Tersebar diseluruh Indonesia</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="trust-card d-flex p-3 rounded align-items-center gap-3">
+                                    <div class="icon-trust">
+                                        <img src="{% static 'image/trust-3.png' %}" alt="medal">
+                                    </div>
+                                    <div class="text-trust">
+                                        <p class="fw-bold mb-0">Didukung oleh Tenaga ahli</p>
+                                        <p class="mb-0">Bekerja sama dengan para ahli untuk kualitas konten</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="trust-card d-flex p-3 rounded align-items-center gap-3">
+                                    <div class="icon-trust">
+                                        <img src="{% static 'image/trust-2.png' %}" alt="medal">
+                                    </div>
+                                    <div class="text-trust">
+                                        <p class="fw-bold mb-0">Rata-rata orang tua merasa puas</p>
+                                        <p class="mb-0">Terjadi peningkatan nilai setelah mengikuti bimbel</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="trust-card d-flex p-3 rounded align-items-center gap-3">
+                                    <div class="icon-trust">
+                                        <img src="{% static 'image/trust-4.png' %}" alt="medal">
+                                    </div>
+                                    <div class="text-trust">
+                                        <p class="fw-bold mb-0">Terintegrasi dengan Fitur yang lebih interaktif</p>
+                                        <p class="mb-0">memberikan pengalaman belajar yang lebih menarik</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    {% include 'footer.html' %}
+
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
+{% endblock %}

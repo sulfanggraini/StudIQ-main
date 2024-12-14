@@ -1,0 +1,62 @@
+{% load static %}
+
+{% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pengguna - StudIQ</title>
+
+    <!-- Menggunakan Bootstrap untuk desain responsif -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profil.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    {% include 'sidebar.html' %}
+
+    <!-- Konten Utama -->
+    <div class="content-wrapper">
+        <div class="container">
+            <h1 class="my-4">Profil Pengguna</h1>
+
+            <!-- Informasi Profil Pengguna -->
+            <div class="card profile-info">
+                <div class="card-body">
+                    <h5 class="card-title">Nama: {{ user }}</h5>
+                    <p class="card-text">Email: {{ email }}</p>
+                </div>
+            </div>
+
+            <!-- Tombol Logout -->
+            <a href="{% url 'studiq_app:index' %}" class="btn btn-danger mt-4">Keluar</a>
+
+            <!-- Histori Kelas -->
+            <div class="history-box">
+                <h5>Histori Kelas yang Pernah Diakses</h5>
+                <ul class="history-list">
+                    {% for class in history_classes %}
+                    <li>
+                        <a href="{% url 'class_detail' class.id %}">{{ class.name }}</a>
+                    </li>
+                    {% empty %}
+                    <li>Tidak ada histori kelas.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JS Bootstrap -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,166 @@
+/* Font Impor Section */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Hero Section */
+#hero {
+    padding-top: 104px;
+    padding-bottom: 64px;
+    background: url('../image/cloud-Hero.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero h1 {
+    font-size: 48px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Kelas Section */
+#visi-misi {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    text-align: center;
+}
+
+#visi-misi h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.bingkai-visi-misi {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #1D99D5 !important;
+    border-radius: 8px;
+    padding: 20px;
+    width: 420px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.bingkai-visi-misi:hover {
+    transform: scale(1.05);
+}
+
+/* Team Section */
+.team-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.team-card {
+    border-radius: 5px;
+    border: 2px solid #007bff;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0px 0px 28px -7px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+.team-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 2px solid #fff;
+}
+
+.team-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 1rem;
+    margin-bottom: auto;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icon a {
+    margin-right: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.social-icon a:hover {
+    color: #007bff;
+}
+
+/* Contact Section */
+.contact {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+/* Footer Section */
+.foot-section {
+    background-color: #EAF2FD;
+    padding-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.foot-section p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.foot-section a {
+    text-decoration: none;
+    color: #000;
+}
+
+.foot-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin-left: 10px;
+}

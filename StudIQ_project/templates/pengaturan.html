@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaturan StudIQ</title>
+    <link rel="stylesheet" href="../asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../asset/css/all.min.css">
+    <link rel="stylesheet" href="../asset/css/stylePengaturan.css">
+</head>
+
+<!-- Main Content -->
+    <div class="main-content">
+        <!-- Navbar Section -->
+        {% include 'navbar.html' %}
+        {% include 'sidebar.html' %}
+
+        <!-- Breadcrumbs -->
+        <div class="container mt-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../Dashboard/index.html">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="">Pengaturan</a></li>
+                </ol>
+            </nav>
+        </div>
+            <!-- Informasi Dasar -->
+            <div class="container mt-4">
+                <h4 class="section-title">Informasi Dasar</h4>
+                <div class="mb-3">
+                    <label for="nickname" class="form-label">Nama panggilan</label>
+                    <input type="text" class="form-control" id="nickname" placeholder="Masukkan nama panggilan">
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Nama pengguna</label>
+                    <input type="text" class="form-control" id="username" placeholder="Masukkan nama pengguna">
+                </div>
+                <div class="mb-3">
+                <label for="birthdate" class="form-label">Tanggal Lahir</label>
+                <div class="d-flex gap-2">
+                    <!-- Bulan -->
+                    <select class="form-select" id="birthMonth">
+                        <option selected>Bulan</option>
+                    </select>
+
+                    <!-- Hari -->
+                    <select class="form-select" id="birthDay">
+                        <option selected>Hari</option>
+                    </select>
+
+                    <!-- Tahun -->
+                    <select class="form-select" id="birthYear">
+                        <option selected>Tahun</option>
+                    </select>
+                </div>
+            </div>
+                <div class="mb-3">
+                    <label for="language" class="form-label">Bahasa Utama</label>
+                    <select class="form-select" id="language">
+                        <option selected>Tidak ditentukan</option>
+                        <option value="id">Bahasa Indonesia</option>
+                        <option value="en">Bahasa Inggris</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Video -->
+            <div class="container mt-4">
+                <h4 class="section-title">Video</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="enableVideo">
+                    <label class="form-check-label" for="enableVideo">Buka video</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="showCaption">
+                    <label class="form-check-label" for="showCaption">Tampilkan caption</label>
+                </div>
+                <div class="mb-3">
+                    <label for="playbackSpeed" class="form-label">Kecepatan pemutaran</label>
+                    <select class="form-select" id="playbackSpeed">
+                        <option selected>Normal</option>
+                        <option value="0.5">0.5x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2">2x</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Ubah Kata Sandi -->
+            <div class="container mt-4">
+                <h4 class="section-title">Ubah Kata Sandi</h4>
+                <div class="mb-3">
+                    <label for="newPassword" class="form-label">Kata sandi baru</label>
+                    <input type="password" class="form-control" id="newPassword" placeholder="Masukkan kata sandi baru">
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Masukkan kembali kata sandi baru</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Masukkan ulang kata sandi">
+                </div>
+            </div>
+
+            <!-- Akun Terhubung -->
+            
+            <div class="container mt-4">
+                <h4 class="section-title">Akun yang telah terhubung</h4>
+                <div class="mb-3">
+                    <a href="#" class="text-danger mx-2" onclick="connectAccount('google')">
+                        <i class="fab fa-google"></i> Tautkan ke Google
+                    </a>
+                    <a href="#" class="text-primary mx-2" onclick="disconnectAccount('facebook')">
+                        <i class="fab fa-facebook"></i> Putus sambungan Facebook
+                    </a>
+                    <a href="#" class="text-dark mx-2" onclick="connectAccount('apple')">
+                        <i class="fab fa-apple"></i> Hubungkan dengan Apple
+                    </a>
+                    <a href="mailto:anagarisalufa@gmail.com" class="text-warning mx-2">
+                        <i class="fas fa-envelope"></i> Email: anandaputri@gmail.com
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Tombol Simpan -->
+            <div class="container mt-4 text-end">
+                <button type="submit" class="btn btn-primary">Simpan perubahan</button>
+            </div>
+            
+
+    <!-- Footer Section -->
+    {% include 'footer.html' %}
+
+    <!-- Bootstrap JS and Custom Script -->
+    <script src="../asset/js/bootstrap.min.js"></script>
+    <script src="../asset/js/all.min.js"></script>
+    <script src="../asset/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>

@@ -1,0 +1,148 @@
+{% load static %}
+
+{% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudIQ</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        {% if request.user.is_authenticated %}
+        <div class="container-fluid">
+            <a href="/">
+                <img class="logo-picture me-auto" src="{% static 'image/logo.png' %}" alt="logo" width="auto"
+                    height="30">
+            </a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a href="/">
+                        <img class="me-auto" src="{% static 'image/logo.png' %}" alt="logo" width="auto" height="30">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="/">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="{% url 'studiq_app:daftar_materi' %}">Belajar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="{% url 'studiq_app:tentang_kami' %}">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="{% url 'studiq_app:FAQs' %}">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h5 class="m-2" style="font-size: 20px;">Halo, {{user}}</h5>
+            <a href="/protected-hal/" id="protected-keluar" class="login-button btn btn-outline-primary fw-bold ms-auto">Keluar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        {% else %}
+        <div class="container-fluid">
+            <a href="/">
+                <img class="logo-picture me-auto" src="{% static 'image/logo.png' %}" alt="logo" width="auto"
+                    height="30">
+            </a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a href="/">
+                        <img class="me-auto" src="{% static 'image/logo.png' %}" alt="logo" width="auto" height="30">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="/">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="/protected-page/" id="protected-button">Belajar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="{% url 'studiq_app:tentang_kami' %}">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="{% url 'studiq_app:FAQs' %}">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="{% url 'studiq_app:login' %}" class="login-button btn btn-outline-primary fw-bold ms-auto">Masuk/Daftar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        {% endif%}
+    </nav>
+
+    <script>
+        document.getElementById('protected-keluar').addEventListener('click', function (e) {
+            e.preventDefault(); // Mencegah redirect langsung
+            Swal.fire({
+                title: 'Apakah Anda yakin?',
+                text: "Anda akan keluar dari akun",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, keluar',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect ke URL logout
+                    window.location.href = "{% url 'studiq_app:logout' %}";
+                }
+            });
+        });
+    </script>
+    <script>
+        // Ganti ID atau tambahkan event listener pada tombol atau link yang memerlukan login
+        document.getElementById('protected-button').addEventListener('click', function (e) {
+            e.preventDefault(); // Mencegah aksi default tombol/link
+            Swal.fire({
+                title: 'Yah, kamu belum bisa mengakses materi.',
+                text: 'Ayo masuk terlebih dahulu untuk belajar bersama StudIQ.',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Masuk',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect ke URL login
+                    window.location.href = "{% url 'studiq_app:login' %}";
+                }
+            });
+        });
+    </script>
+
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
+{% endblock %}

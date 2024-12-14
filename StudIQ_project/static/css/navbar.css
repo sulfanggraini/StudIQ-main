@@ -1,0 +1,45 @@
+/* Font Impor Section */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Navbar Section */
+@media (max-width: 991.98px) {
+    .logo-picture {
+        display: none;
+    }
+
+    .video-isi {
+        display: none;
+    }
+
+    .image-guru {
+        display: none;
+    }
+
+    .logo-footer a {
+        display: none;
+    }
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+.navbar a {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #333 !important;
+}
+
+.nav-link:hover {
+    color: #005cdd !important;
+}
+
+.login-button {
+    font-size: 14px !important;
+    padding: 8px 10px !important;
+    text-decoration: none !important;
+    margin-right: 10px !important;
+}

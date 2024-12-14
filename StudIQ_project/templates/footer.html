@@ -1,0 +1,42 @@
+{% load static %}
+
+{% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudIQ</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <footer class="foot-section">
+        <p>
+            &copy; StudIQ Development Team. Hak Cipta Dilindungi.</a>
+            2024
+        </p>
+        <div class="logo-footer d-flex align-items-center mx-3 social-icons">
+            <a href="/" class="text-dark mx-2">Kebijakan Privasi</a>
+            <span class="text-white"></span>
+            <a href="/" class="text-dark mx-2">Ketentuan Layanan</a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a> <!-- Ikon YouTube -->
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a> <!-- Ikon Facebook -->
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a> <!-- Ikon Instagram -->
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a> <!-- Ikon LinkedIn -->
+        </div>
+    </footer>
+
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
+{% endblock %}

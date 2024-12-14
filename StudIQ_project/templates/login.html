@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style-login.css' %}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="login">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="left-section col-md-4 justify-content-center d-flex align-items-center p-4"
+                    style="height: 100vh;">
+                    <img src="{% static 'image/logo.png' %}" alt="logo">
+                </div>
+                <div class="right-section col-md-8 d-flex justify-content-center align-items-center p-4"
+                    style="height: 100vh;">
+                    <div class="login-box container mx-auto" style="max-width: 400px; width: 100%;">
+                        <p class="mb-2">
+                            <a href="/" class="fw-bold text-decoration-none text-dark">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                Kembali
+                            </a>
+                        </p>
+                        <form class="box-login" method="POST">
+                            {% csrf_token %}
+                            <h1 class="login-title highlight fw-bold text-center">Masuk</h1>
+
+                            <!-- Menampilkan pesan kesalahan jika ada -->
+                            {% if messages %}
+                            <div class="alert alert-danger" role="alert">
+                                {% for message in messages %}
+                                <p>{{ message }}</p>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            <div class="input-box mb-3">
+                                <input type="text" required="" name="username" placeholder="Masukkan Username">
+                            </div>
+                            <div class="input-box mb-3">
+                                <input type="password" required="" name="password" placeholder="Kata sandi">
+                            </div>
+                            <div class="remember-forget-box">
+                                <div class="remember-me">
+                                    <input type="checkbox" name="remember-me" id="remember-me">
+                                    <label for="remember-me">
+                                        <h5>Ingat saya</h5>
+                                    </label>
+                                </div>
+                                <a class="forget-password" href="#">
+                                    <h5>Lupa Password?</h5>
+                                </a>
+                            </div>
+                            <button type="submit" class="login-button text-decoration-none">
+                                Masuk
+                            </button>
+                            <div class="css-70qvj9">
+                                <hr aria-orientation="horizontal" class="chakra-divider css-tesqf4">
+                                <p class="chakra-text css-1lvbqnw">atau</p>
+                                <hr aria-orientation="horizontal" class="chakra-divider css-tesqf4">
+                            </div>
+                            <a href="{% provider_login_url 'google' %}" class="google-button text-decoration-none"><i class="fa-brands fa-google fa-lg" style="color: #ffffff;"></i></a>
+                            <h5 class="dont-have-an-account">
+                                Belum punya akun?
+                                <a href="{% url 'studiq_app:register' %}"><b>Daftar</b></a>
+                            </h5>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

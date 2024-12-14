@@ -1,0 +1,61 @@
+* Gaya untuk bagian FAQ */
+.section-faq {
+    background-color: #fff; /* Warna latar belakang putih */
+    padding: 40px 0;
+}
+
+/* Gaya untuk setiap item di bagian FAQ */
+.faqs-body {
+    padding-top: 64px;
+    padding-bottom: 452px;
+}
+
+.section-faq .faq-item {
+    margin-bottom: 20px; /* Jarak antara setiap item FAQ */
+    padding: 15px;
+    border-bottom: 1px solid #ddd; /* Garis bawah antara item */
+}
+
+/* Gaya untuk judul pertanyaan di FAQ */
+.section-faq .faq-item h3 {
+    font-size: 1.5rem; 
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+/* Gaya untuk konten teks di FAQ */
+.section-faq .faq-item p {
+    font-size: 1rem; 
+    color: #666; 
+}
+
+/* Footer Section */
+.foot-section {
+    background-color: #EAF2FD;
+    padding-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.foot-section p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.foot-section a {
+    text-decoration: none;
+    color: #000;
+}
+
+.foot-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin-left: 10px;
+}

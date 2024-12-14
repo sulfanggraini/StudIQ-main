@@ -1,0 +1,104 @@
+{% load static %}
+
+{% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudIQ</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/faqs-style.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    {% include 'navbar.html' %}
+
+    <!-- Bagian FAQ -->
+    <div class="faqs-body container mt-5">
+        <h2 class="title-faqs text-center mb-4">Frequently Asked Questions (FAQs)</h2>
+        <div class="accordion" id="faqAccordion">
+
+            <!-- Pertanyaan 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Bagaimana cara
+                        mendaftar di StudIQ?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Anda dapat mendaftar di StudIQ dengan mengunjungi halaman pendaftaran dan mengisi formulir yang
+                        disediakan.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pertanyaan 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Apa saja fitur
+                        yang tersedia di StudIQ?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        StudIQ menyediakan berbagai fitur seperti video pembelajaran interaktif, kumpulan materi
+                        pembelajaran yang relevan, dan bank soal
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pertanyaan 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Bagaimana cara mengakses materi yang telah diunduh?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Setelah Anda mengunduh materi pembelajaran dari StudIQ, Anda dapat mengaksesnya di perangkat
+                        Anda tanpa perlu koneksi internet.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="foot-section">
+        <p>
+            &copy; StudIQ Development Team. Hak Cipta Dilindungi.</a>
+            2024
+        </p>
+        <div class="logo-footer d-flex align-items-center mx-3 social-icons">
+            <a href="/" class="text-dark mx-2">Kebijakan Privasi</a>
+            <span class="text-white"></span>
+            <a href="/" class="text-dark mx-2">Ketentuan Layanan</a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a> <!-- Ikon YouTube -->
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a> <!-- Ikon Facebook -->
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a> <!-- Ikon Instagram -->
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a> <!-- Ikon LinkedIn -->
+        </div>
+    </footer>
+
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,155 @@
+{% load static %}
+
+{% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>StudIQ</title>
+
+    <!-- Link to local Bootstrap CSS and custom styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materi1-style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="container-fluid d-flex mt-4 mb-4 konten">
+        <div class="row w-100">
+            <aside class="col-md-4 bg-white shadow-sm asid rounded">
+                <div class="d-flex bg-primary rounded text-light">
+                    <i class="far fa-list-alt me-2 fa-3x titik list"></i>
+                    <h2 class="h5 fw-bold mb-3 list">
+                        Pelajaran Kelas 4<br>Ilmu Pengetahuan Alam <br><span class="enam">2 Materi</span>
+                    </h2>
+                </div>
+                <div class="mb-3">
+                    <hr>
+                    <ul class="list-unstyled">
+                            <li class="sidebar-item active mb-2">
+                                <a href="" class="side text-dark"><span class="fw-bold">Materi 1</span> <br>Makhluk Hidup dan Lingkungannya</a>
+                            </li>
+                            <hr>
+                        <li class="sidebar-item mb-2">
+                            <a href="{% url 'studiq_app:ipa4_2' %}" class="side text-dark"><span class="fw-bold">Materi 2</span> <br>Dinamika Bumi dan Sumber Daya Alam</a>
+                        </li>
+                        <hr>
+                    </ul>
+                </div>
+            </aside>
+            <main class="col-md-8 content-wrapper bg-white shadow-sm rounded custom-main">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                    aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">Belajar</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">IPA Kelas 4</li>
+                    </ol>
+                </nav>
+                <h1 class="h4 fw-bold mb-2">
+                    Materi 1<br>Makhluk Hidup dan Lingkungannya
+                </h1>
+                <p class="text-secondary mb-4">Pelajari materi dengan seksama dan kerjakan latihannya, ya!</p>
+                <div class="card mb-4 border-primary shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">
+                            Materi Pembelajaran
+                        </h5>
+                        <ul class="list-unstyled">
+                            <a href="{% url 'studiq_app:materiipa4_1.1' %}" class="pilih">
+                                <li>
+                                    <i class="fas fa-book-reader"></i>
+                                    Rangka dan Panca Indra Manusia
+                                </li>
+                            </a>
+                            <a href="{% url 'studiq_app:materiipa4_1.2' %}" class="pilih">
+                                <li>
+                                    <i class="fas fa-book-reader"></i>
+                                    Struktur dan Fungsi Bagian Tumbuhan
+                                </li>
+                            </a>
+                            <a href="{% url 'studiq_app:materiipa4_1.3' %}" class="pilih">
+                                <li>
+                                    <i class="fas fa-book-reader"></i>
+                                    Pengelompokan Hewan Berdasarkan Jenis Makanan
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-4 border-primary shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">
+                            Video Pembelajaran
+                        </h5>
+                        <ul class="list-unstyled">
+                            <a href="{% url 'studiq_app:videoipa' order=1 %}" class="pilih">
+                                <li>
+                                    <i class="fab fa-youtube"></i>
+                                    Rangka dan Panca Indra Manusia
+                                </li>
+                            </a>
+                            <a href="{% url 'studiq_app:videoipa' order=2 %}" class="pilih">
+                                <li>
+                                    <i class="fab fa-youtube"></i>
+                                    Struktur dan Fungsi Bagian Tumbuhan
+                                </li>
+                            </a>
+                            <a href="{% url 'studiq_app:videoipa' order=3 %}" class="pilih">
+                                <li>
+                                    <i class="fab fa-youtube"></i>
+                                    Pengelompokan Hewan Berdasarkan Jenis Makanan
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-4 border-primary shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">
+                            Latihan
+                        </h5>
+                        <ul class="list-unstyled">
+                            <a href="" class="pilih">
+                                <li>
+                                    <i class="fas fa-trophy"></i>
+                                    Rangka dan Panca Indra Manusia
+                                </li>
+                            </a>
+                            <a href="" class="pilih">
+                                <li>
+                                    <i class="fas fa-trophy"></i>
+                                    Struktur dan Fungsi Bagian Tumbuhan
+                                </li>
+                            </a>
+                            <a href="" class="pilih">
+                                <li>
+                                    <i class="fas fa-trophy"></i>
+                                    Pengelompokan Hewan Berdasarkan Jenis Makanan
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    {% include 'footer.html' %}
+
+    <!-- Bootstrap JS and Custom Script -->
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
+{% endblock %}

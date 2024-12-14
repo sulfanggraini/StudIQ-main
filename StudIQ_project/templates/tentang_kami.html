@@ -1,0 +1,198 @@
+{% load static %}
+
+{% block body_block %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudIQ</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tentang-kami-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar-style.css' %}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    {% include 'navbar.html' %}
+
+    <!-- Hero Section -->
+    <div id="hero">
+        <div class="container text-center">
+            <h1 class="fw-bold text-dark">Tentang StudIQ</h1>
+            <p>StudIQ merupakan platform EdTech berbasis website yang dirancang khusus untuk siswa SD kelas 4, 5, dan
+                6.<br>Dengan pendekatan pembelajaran interaktif, StudIQ menawarkan berbagai sumber belajar yang menarik
+                dan mudah diakses, termasuk materi pembelajaran dan bank soal<br>Platform ini bertujuan untuk memberikan
+                pengalaman belajar yang menyenangkan dan efektif, sehingga siswa/i dapat memahami konsep-konsep yang
+                diajarkan dengan lebih baik</p>
+        </div>
+    </div>
+
+    <!-- Card Section -->
+    <div id="visi-misi">
+        <div class="container">
+            <div class="card-container">
+                <div class="bingkai-visi-misi card">
+                    <h3 class="fw-bold">Visi</h3>
+                    <p>Menjadi platform materi pembelajaran online terdepan yang memberikan akses materi pembelajaran
+                        berkualitas serta meningkatkan pemahaman seluruh murid di Indonesia</p>
+                </div>
+                <div class="bingkai-visi-misi card">
+                    <h3 class="fw-bold">Misi</h3>
+                    <p>Memberikan materi pembelajaran yang berkualitas dan mudah dipahami setiap minggunya dan
+                        menciptakan lingkungan pembelajaran yang efektif</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container text-center">
+            <h2 class="fw-bold">Tim Kami</h2>
+            <div class="team-container">
+                <div class="team-card">
+                    <img src="{% static 'image/avatar-2.png' %}" alt="Team Member 1">
+                    <h4>Daffa Shiddiq Hidayat</h4>
+                    <p>CTO</p>
+                    <div class="social-icon">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'image/avatar-1.png' %}" alt="Team Member 2">
+                    <h4>Sulfa Anggraini</h4>
+                    <p>CTO</p>
+                    <div class="social-icon">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'image/avatar-2.png' %}" alt="Team Member 3">
+                    <h4>Muhamad Syafril Efendi</h4>
+                    <p>CTO</p>
+                    <div class="social-icon">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'image/avatar-1.png' %}" alt="Team Member 4">
+                    <h4>Rifdah Fitriani Saharrudin</h4>
+                    <p>CTO</p>
+                    <div class="social-icon">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'image/avatar-2.png' %}" alt="Team Member 5">
+                    <h4>Rangga</h4>
+                    <p>CTO</p>
+                    <div class="social-icon">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'image/avatar-1.png' %}" alt="Team Member 6">
+                    <h4>Wardah Muzayyinatul</h4>
+                    <p>CTO</p>
+                    <div class="social-icon">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'image/avatar-2.png' %}" alt="Team Member 7">
+                    <h4>Tegar Adji Nugroho</h4>
+                    <p>CTO</p>
+                    <div class="social-icon">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'image/avatar-1.png' %}" alt="Team Member 8">
+                    <h4> Firly Noning Agreliya Hutapa</h4>
+                    <p>CTO</p>
+                    <div class="social-icon">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="text-center">Kontak Kami</h2>
+            <p class="text-center">Hubungi StudIQ untuk pertanyaan lebih lanjut atau buka kolom FAQs</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-details">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Jl. Pegangsaan Timur No.56, Jakarta Timur, Indonesia.
+                        </p>
+                        <p><i class="fas fa-envelope"></i> studiq@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> 1234567890</p>
+                        <p>
+                            <i class="fas fa-clock"></i> Bimbingan Online: 8:00 AM - 23:59 PM
+                        </p>
+                        <p><i class="fas fa-globe"></i> www.studiq.com</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" placeholder="Nama*" required />
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email*" required />
+                        </div>
+                        <div class="form-group mb-3">
+                            <textarea class="form-control" placeholder="Pesan*" required></textarea>
+                        </div>
+                        <button id="submit-message" class="btn btn-primary mb-3" type="submit">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    {% include 'footer.html' %}
+
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
+{% endblock %}

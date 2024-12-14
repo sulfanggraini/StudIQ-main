@@ -1,0 +1,79 @@
+{% load static %}
+
+{% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudIQ</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materi-style.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    {% include 'navbar.html' %}
+
+    <!-- Isi Section -->
+    <div id="materi">
+        <div class="container">
+            <h1>Ingin belajar apa kamu hari ini?</h1>
+            <div class="bingkai-filter card">
+                <div class="row">
+                    <div class="isi-container col-md-5">
+                        <p>Kelas</p>
+                        <select id="kelasSelect" class="form-select" aria-label="Default select example">
+                            <option selected>Pilih Kelas</option>
+                            <option value="4SD">Kelas 4 SD</option>
+                            <option value="5SD">Kelas 5 SD</option>
+                            <option value="6SD">Kelas 6 SD</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <p>Mata Pelajaran</p>
+                        <select id="mapelSelect" class="form-select" aria-label="Default select example">
+                            <option selected>Pilih Mata Pelajaran</option>
+                            <option value="IPA">Ilmu Pengetahuan Alam</option>
+                            <option value="MM">Matematika</option>
+                            <option value="ING">Bahasa Inggris</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <a id="lihatMateriButton" href="" class="filter-button btn btn-outline-primary fw-bold ms-auto">Lihat Materi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="foot-section">
+        <p>
+            &copy; StudIQ Development Team. Hak Cipta Dilindungi.</a>
+            2024
+        </p>
+        <div class="logo-footer d-flex align-items-center mx-3 social-icons">
+            <a href="/" class="text-dark mx-2">Kebijakan Privasi</a>
+            <span class="text-white"></span>
+            <a href="/" class="text-dark mx-2">Ketentuan Layanan</a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a> <!-- Ikon YouTube -->
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a> <!-- Ikon Facebook -->
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a> <!-- Ikon Instagram -->
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a> <!-- Ikon LinkedIn -->
+        </div>
+    </footer>
+
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/lihat_materi.js' %}"></script>
+</body>
+
+</html>
+<!-- Sidebar Section -->
+{% include 'sidebar.html' %}
+{% endblock %}

@@ -1,0 +1,76 @@
+body {
+    padding-top: 60px; /* Memberikan ruang untuk navbar */
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.profile-info {
+    margin-bottom: 30px;
+}
+
+.history-box {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.history-box h5 {
+    margin-bottom: 20px;
+}
+
+.history-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.history-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.history-list li:last-child {
+    border-bottom: none;
+}
+
+.history-list li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.history-list li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+.content-wrapper {
+    margin-left: 270px; /* Memberikan ruang untuk sidebar */
+    padding: 20px;
+}

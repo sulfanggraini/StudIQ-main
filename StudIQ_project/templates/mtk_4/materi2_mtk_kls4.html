@@ -1,0 +1,235 @@
+{% load static %}
+
+{% block body_block %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>StudIQ</title>
+
+    <!-- Link to local Bootstrap CSS and custom styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materi1-style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <!-- navbar-expand-lg: Membuat navbar responsif pada layar yang lebih besar (lg = large) -->
+    <!-- container-fluid px-5: Memberikan padding dan px-5 memberikan padding horizontal (kiri dan kanan) -->
+    <!-- py-2: Menambahkan padding pada sumbu vertikal (atas dan bawah) -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container-fluid">
+            <a href="/">
+                <img class="logo-picture me-auto" src="{% static 'image/logo.png' %}" alt="logo" width="auto"
+                    height="30">
+            </a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a href="/">
+                        <img class="me-auto" src="{% static 'image/logo.png' %}" alt="logo" width="auto" height="30">
+                    </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-left flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="/">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="{% url 'studiq_app:daftar_kelas' %}">Daftar Kelas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="{% url 'studiq_app:tentang_kami' %}">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="{% url 'studiq_app:FAQs' %}">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="{% url 'studiq_app:login' %}"
+                class="login-button btn btn-outline-primary fw-bold ms-auto">Masuk/Daftar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex mt-4 mb-4 konten">
+        <div class="row w-100">
+            <aside class="col-md-4 bg-white shadow-sm asid ">
+                <div class="d-flex bg-primary text-light">
+                    <i class="far fa-list-alt me-2 fa-3x titik list"></i>
+                    <h2 class="h5 fw-bold mb-3 list">
+                        Daftar Materi<br>Matematika <br><span class="enam"> 5 Materi</span>
+                    </h2>
+                </div>
+                <div class="mb-3">
+                    <hr>
+                    <ul class="list-unstyled">
+                        <li class="sidebar-item mb-2">
+                            <a href="{% url 'studiq_app:materi1_mtk_kls4' %}" class="side text-dark"><span class="fw-bold">Materi 1</span> <br>KELIPATAN DAN FAKTOR</a>
+                        </li>
+                        <hr>
+                        <li class="sidebar-item active mb-2">
+                            <a href="{% url 'studiq_app:materi2_mtk_kls4' %}" class="side text-dark"><span class="fw-bold">Materi 2</span> <br>PECAHAN DAN DESIMAL</a>
+                        </li>
+                        <hr>
+                        <li class="sidebar-item mb-2">
+                            <a href="{% url 'studiq_app:materi3_mtk_kls4' %}" class="side text-dark"><span class="fw-bold">Materi 3</span> <br>PENGUKURAN</a>
+                        </li>
+                        <hr>
+                        <li class="sidebar-item mb-2">
+                            <a href="{% url 'studiq_app:materi3_mtk_kls4' %}" class="side text-dark"><span class="fw-bold">Materi 4</span> <br>LUAS DAN KELILING</a>
+                        </li>
+                        <hr>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="col-md-8 content-wrapper bg-white shadow-sm rounded custom-main">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                    aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">Belajar</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="#">Matematika Kelas 4</a></li>
+                    </ol>
+                </nav>
+                <h1 class="h4 fw-bold mb-2">
+                    Materi 2<br>Matematika kelas 4
+                </h1>
+                <p class="text-secondary mb-4">Pelajari materi dengan seksama dan kerjakan latihannya, ya!</p>
+                <div class="card mb-4 border-primary shadow-sm">
+                    <div class="card-body p-2">
+                        <h5 class="card-title fw-bold">
+                            Materi Pembelajaran
+                        </h5>
+                        <ul class="list-unstyled">
+                            <a href="" class="pilih">
+                                <li>
+                                    <i class="fas fa-book-reader"></i>
+                                    Mencari penyebut yang sama
+                            </a>
+                            <a href="" class="pilih">
+                                <li>
+                                    <i class="fas fa-book-reader"></i>
+                                    Mengurutkan pecahan
+                                </li>
+                            </a>
+                            <a href="" class="pilih">
+                                <li>
+                                    <i class="fas fa-book-reader"></i>
+                                    Cara menulis desimal
+                                </li>
+                            </a>
+                            <a href="" class="pilih">
+                                <li>
+                                    <i class="fas fa-book-reader"></i>
+                                    Menulis bilangan dalam bentuk pecahan dan desimal
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-4 border-primary shadow-sm">
+                    <div class="card-body p-2">
+                        <h5 class="card-title fw-bold">
+                            Video Pembelajaran
+                        </h5>
+                        <ul class="list-unstyled">
+                            <a href="{% url 'studiq_app:video2_mtk_kls4' order=1 %}" class="pilih">
+                                <li>
+                                    <i class="fab fa-youtube"></i>
+                                    Mencari penyebut yang sama
+                                </li>
+                            </a>
+                            <a href="{% url 'studiq_app:video2_mtk_kls4' order=2 %}" class="pilih">
+                                <li>
+                                    <i class="fab fa-youtube"></i>
+                                    Mengurutkan pecahan
+
+                                </li>
+                            </a>
+                            <a href="{% url 'studiq_app:video2_mtk_kls4' order=3 %}" class="pilih">
+                                <li>
+                                    <i class="fab fa-youtube"></i>
+                                    Cara menulis desimal
+
+                                </li>
+                            </a>
+                            <a href="{% url 'studiq_app:video2_mtk_kls4' order=4 %}" class="pilih">
+                                <li>
+                                    <i class="fab fa-youtube"></i>
+                                    Menulis bilangan dalam bentuk pecahan dan desimal
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-4 border-primary shadow-sm">
+                    <div class="card-body p-2">
+                        <h5 class="card-title fw-bold">
+                            Latihan
+                        </h5>
+                        <ul class="list-unstyled">
+                            <a href="" class="pilih">
+                                <li>
+                                    <i class="fas fa-trophy"></i>
+                                    Level 1
+                                </li>
+                            </a>
+                            <a href="" class="pilih">
+                                <li>
+                                    <i class="fas fa-trophy"></i>
+                                    Level 2
+                                </li>
+                            </a>
+                            <a href="" class="pilih">
+                                <li>
+                                    <i class="fas fa-trophy"></i>
+                                    Level 3
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bagian Footer -->
+    <footer class="foot-section">
+        <p>
+            &copy; StudIQ Development Team. Hak Cipta Dilindungi.</a>
+            2024
+        </p>
+        <div class="logo-footer d-flex align-items-center mx-3 social-icons">
+            <a href="/" class="text-dark mx-2">Kebijakan Privasi</a>
+            <span class="text-white"></span>
+            <a href="/" class="text-dark mx-2">Ketentuan Layanan</a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a> <!-- Ikon YouTube -->
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a> <!-- Ikon Facebook -->
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a> <!-- Ikon Instagram -->
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a> <!-- Ikon LinkedIn -->
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Custom Script -->
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,77 @@
+@media (max-width: 991.98px) {
+    .left-section {
+        height: 10vh !important;
+    }
+}
+
+.left-section {
+    background-color: #007bff;
+}
+
+.right-section {
+    color: #333;
+}
+
+.login-box {
+    width: 60%;
+}
+
+.box-login {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 16px;
+    border: solid 5px rgb(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 30px 20px rgb(0, 0, 0, 0.1);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.input-box {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 10px 10px 10px; 
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #333; 
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.input-box input:focus {
+    outline-width: 0px;
+}
+
+.syarat-cek p {
+    font-size: 12px;
+}
+
+.login-button {
+    width: 100%; 
+    padding: 10px 0; 
+    background: #007bff; 
+    border: none; 
+    border-radius: 99px; 
+    color: white; 
+    font-weight: bold;
+    font-size: 15px; 
+    text-align: center; 
+    cursor: pointer; 
+}
+
+.login-button:focus {
+    outline: #32CDD58A 3px solid; 
+}

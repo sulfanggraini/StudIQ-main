@@ -1,0 +1,207 @@
+/* Font Impor Section */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Hero Section */
+#hero {
+    padding-top: 104px;
+    padding-bottom: 64px;
+    background: url('../image/cloud-Hero.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero h1 {
+    font-size: 48px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Kelas Section */
+#kelas {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    text-align: center;
+}
+
+#kelas h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.bingkai-kelas {
+    border: 1px solid #1D99D5 !important;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.bingkai-kelas:hover {
+    transform: scale(1.05);
+}
+
+/* Konten Section */
+.konten {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.konten h1 {
+    text-align: center;
+}
+
+.konten h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.konten .row {
+    justify-content: center;
+}
+
+.konten .card {
+    display: flex;
+    height: 200px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+    position: relative;
+    border-radius: 16px;
+    border: 2px solid #1D99D5;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 8px 8px 25px 0px rgba(63, 75, 109, 0.15);
+    transition: all ease 200ms;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.konten .card .img-icon {
+    position: absolute;
+    right: -90px;
+    opacity: .5;
+    top: 0;
+    /* transform: translateY(-50%); */
+    width: 200px;
+    height: 200px;
+    transition: all ease 500ms;
+    z-index: 0;
+}
+
+.konten .card .card-title {
+    color: #1D99D5;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.konten .card:hover img{
+    transform: translateY(-10%);
+    opacity: 100%;
+}
+
+.konten img {
+    transition: .5s;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+/* Isi Section */
+#isi {
+    padding-bottom: 64px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+#isi h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.bingkai-isi-percaya {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 16px;
+    padding: 46px 44px;
+    box-shadow: 0px 0px 28px -7px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 28px -7px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 28px -7px rgba(0, 0, 0, 0.25);
+}
+
+.isi-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.trust-card {
+    background-color: #C1E8FF;
+    text-align: center;
+}
+
+.text-trust p {
+    color: #333;
+    font-size: 12px;
+}
+
+.icon-trust img {
+    border-radius: 10px;
+    width: 55px;
+    height: auto;
+}
+
+/* Footer Section */
+.foot-section {
+    background-color: #EAF2FD;
+    padding-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.foot-section p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.foot-section a {
+    text-decoration: none;
+    color: #000;
+}
+
+.foot-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin-left: 10px;
+}
