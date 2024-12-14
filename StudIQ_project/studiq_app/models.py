@@ -125,3 +125,24 @@ class Video4mtkkls4(models.Model):
 
     class Meta:
         ordering = ['order']  # Mengatur urutan berdasarkan kolom "order"
+
+# MODELS QUIZ
+class Quiz(models.Model):
+    question = models.CharField(max_length=255)
+    option_a = models.CharField(max_length=255)
+    option_b = models.CharField(max_length=255)
+    option_c = models.CharField(max_length=255)
+    option_d = models.CharField(max_length=255)
+    correct_answer = models.CharField(max_length=1)  # "A", "B", "C", atau "D"
+
+    def __str__(self):
+        return self.question
+
+class QuizHistory(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
+    selected_answer = models.CharField(max_length=1)  # "A", "B", "C", atau "D"
+    is_correct = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.quiz.question}"

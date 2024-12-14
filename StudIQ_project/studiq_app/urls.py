@@ -85,4 +85,6 @@ urlpatterns = [
     path('video3mtkkls4/<int:order>/', views.video3mtkkls4, name='video3_mtk_kls4'),
     path('video4mtkkls4/<int:order>/', views.video4mtkkls4, name='video4_mtk_kls4'),
 
+    path('quiz/', views.quiz_page, name='quiz')
+
 ]

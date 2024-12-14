@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {% for quiz in quizzes %}
+            <div>
+                <p><strong>{{ quiz.question }}</strong></p>
+                <label>
+                    <input type="radio" name="{{ quiz.id }}" value="A">
+                    {{ quiz.option_a }}
+                </label><br>
+                <label>
+                    <input type="radio" name="{{ quiz.id }}" value="B">
+                    {{ quiz.option_b }}
+                </label><br>
+                <label>
+                    <input type="radio" name="{{ quiz.id }}" value="C">
+                    {{ quiz.option_c }}
+                </label><br>
+                <label>
+                    <input type="radio" name="{{ quiz.id }}" value="D">
+                    {{ quiz.option_d }}
+                </label><br>
+            </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Your Score: {{ score }}%</h2> <!-- Tampilkan skor -->
+    
+    <h2>Quiz History</h2>
+    <ul>
+        {% for history in user_history %}
+            <li>
+                Question: {{ history.quiz.question }}<br>
+                Your Answer: {{ history.selected_answer }}<br>
+                Correct Answer: {{ history.quiz.correct_answer }}<br>
+                Result: {{ history.is_correct|yesno:"Correct,Wrong" }}
+            </li>
+        {% empty %}
+            <p>You haven't taken any quizzes yet.</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>

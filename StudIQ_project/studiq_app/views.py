@@ -478,7 +478,39 @@ def video4mtkkls4(request, order):
     
     return render(request, 'mtk_4/video4_mtk_kls4.html', context)
 
+# views QUIZ
+@login_required
+def quiz_page(request):
+    quizzes = Quiz.objects.all()
+    user_history = QuizHistory.objects.filter(user=request.user)
 
+    # Jika request adalah POST, artinya user telah mengirim jawaban
+    if request.method == "POST":
+        # Proses jawaban user
+        for quiz in quizzes:
+            user_answer = request.POST.get(str(quiz.id))
+            if user_answer:
+                is_correct = user_answer == quiz.correct_answer
+                QuizHistory.objects.update_or_create(
+                    user=request.user,
+                    quiz=quiz,
+                    defaults={'selected_answer': user_answer, 'is_correct': is_correct}
+                )
+        # Redirect ke halaman quiz setelah proses submit
+        return redirect('studiq_app:quiz')  # Pastikan menggunakan namespace yang benar
+
+    # Hitung skor hanya jika ada jawaban yang tersimpan
+    total_correct = QuizHistory.objects.filter(user=request.user, is_correct=True).count()
+    total_quizzes = quizzes.count()
+    score = (total_correct / total_quizzes) * 100 if total_quizzes > 0 else 0
+
+    # Konteks yang akan dikirim ke template
+    context = {
+        'quizzes': quizzes,
+        'user_history': user_history,
+        'score': score,  # Tambahkan skor ke dalam konteks
+    }
+    return render(request, 'quiz.html', context)
 
 
 
